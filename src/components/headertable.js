@@ -11,7 +11,9 @@ const useStyles = makeStyles({
         color: "white",
         borderRadius: "15px", 
         height: "40px",
-         width: "" ,
+        width: "" ,
+        
+        
 
     },
     div1: {
@@ -36,7 +38,7 @@ export default ({ setSearchNameFilter }) => {
     };
 
     const handleSubmitFilter = (e) => {
-
+        e.preventDefault();
         var typingTimer;
         clearTimeout(typingTimer)
         typingTimer = setTimeout(doFilter, 1000)
@@ -61,9 +63,8 @@ export default ({ setSearchNameFilter }) => {
                         value={toNameFilter}
                         onChange={changeNameTF}
                         onKeyUp={handleSubmitFilter}
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
+                        
+
                         variant="outlined"
                         placeholder="Ex: Luca"
                     />

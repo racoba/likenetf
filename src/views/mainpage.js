@@ -25,9 +25,7 @@ export default () => {
     }
 
     useEffect(async () => {
-        
             await getMovies();
-        
     }, [page]);
 
     return (
