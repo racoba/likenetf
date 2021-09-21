@@ -1,8 +1,11 @@
 .MuiOutlinedInput-input {
     color: white !important;
+    
 }
 
+.MuiOutlinedInput-input:focus {
 
+}
 
 .MuiPaginationItem-root {
     color: white !important;

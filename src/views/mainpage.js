@@ -17,7 +17,6 @@ export default () => {
         await fetch(MoviesAPI+page)
             .then((res) => res.json())
             .then((data) => {
-               
                 setQuantPages(data.total_pages)
                 setMovies(data.results);
             })

@@ -16,7 +16,8 @@ const useStyles = makeStyles({
 
 })
 
-export default ({ moviesList, changeTotalPages }) => {
+
+export default ({ moviesList }) => {
 
   const classes = useStyles();
 
@@ -33,7 +34,6 @@ export default ({ moviesList, changeTotalPages }) => {
     .then((res) => res.json())
     .then((data) => { 
       setFilteredMovies(data.results) 
-      
     })
   },[searchNameFilter])
 
@@ -47,7 +47,7 @@ export default ({ moviesList, changeTotalPages }) => {
       />
 
 
-    
+
       <div className={classes.div1}>
         {filteredMovies ? filteredMovies.map((item) => (
           <Movie key={item.id} {...item} />

@@ -13,8 +13,6 @@ const useStyles = makeStyles({
         height: "40px",
         width: "" ,
         
-        
-
     },
     div1: {
         height: "10%",
@@ -41,7 +39,7 @@ export default ({ setSearchNameFilter }) => {
         e.preventDefault();
         var typingTimer;
         clearTimeout(typingTimer)
-        typingTimer = setTimeout(doFilter, 1000)
+        typingTimer = setTimeout(doFilter, 2000)
 
     }
 
@@ -63,8 +61,6 @@ export default ({ setSearchNameFilter }) => {
                         value={toNameFilter}
                         onChange={changeNameTF}
                         onKeyUp={handleSubmitFilter}
-                        
-
                         variant="outlined"
                         placeholder="Ex: Luca"
                     />
